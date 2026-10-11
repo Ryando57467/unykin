@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIKYN | Esquadrias de Alumínio de Alto Padrão - SP & SE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#090a0f',
+                        darkCard: '#111319',
+                        darkGraphite: '#1a1d26',
+                        brandRed: '#dc2626',
+                        brandRedHover: '#b91c1c',
+                        brandRedLight: '#ef4444',
+                        unikynRed: '#d91414'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .red-glow {
+            box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.4);
+        }
+        .red-glow-sm {
+            box-shadow: 0 0 15px -3px rgba(220, 38, 38, 0.3);
+        }
+        .uk-logo-box {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            border: 2px solid #dc2626;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-200 antialiased selection:bg-brandRed selection:text-white">
+
+    <!-- Top Information Bar -->
+    <div class="bg-black border-b border-gray-800/80 text-xs text-gray-300 py-2.5 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brandRed"></i> <strong>São Paulo:</strong> Região de Interlagos (Zona Sul)</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brandRed"></i> <strong>Nordeste:</strong> Umbaúba - Sergipe (SE)</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="mailto:angeloreis80d@mail.com" class="hover:text-brandRedLight transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-brandRed"></i> angeloreis80d@mail.com
+                </a>
+                <a href="https://wa.me/5511958625538" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 font-semibold">
+                    <i class="fa-brands fa-whatsapp text-emerald-500 text-sm"></i> (11) 95862-5538
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="fixed top-0 md:top-9 left-0 right-0 z-50 bg-darkBg/95 backdrop-blur-md border-b border-gray-800/80 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo (UK UNIKYN styling) -->
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="uk-logo-box px-2.5 py-1 rounded-xl shadow-lg flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <span class="text-xl font-black tracking-tighter text-brandRed">U<span class="text-white">K</span></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-black tracking-wider text-white leading-none">UNI<span class="text-brandRed">KYN</span></span>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold mt-0.5">Esquadrias de Alumínio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">Início</a>
+                    <a href="#unidades" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">Unidades</a>
+                    <a href="#sobre" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">A UNIKYN</a>
+                    <a href="#produtos" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">Produtos</a>
+                    <a href="#calculadora" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">Simulador</a>
+                    <a href="#contato" class="text-gray-300 hover:text-brandRed font-semibold text-sm transition-colors">Contato</a>
+                </nav>
+
+                <!-- WhatsApp Quick Action CTA -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="https://wa.me/5511958625538?text=Olá!%20Vim%20pelo%20site%20da%20UNIKYN%20e%20gostaria%20de%20um%20orçamento." target="_blank" class="bg-brandRed hover:bg-brandRedHover text-white font-bold px-5 py-2.5 rounded-xl shadow-lg transition-all duration-300 red-glow-sm flex items-center gap-2 text-sm">
+                        <i class="fa-brands fa-whatsapp text-base"></i> (11) 95862-5538
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-darkCard border-b border-gray-800 px-6 pt-4 pb-6 space-y-4">
+            <a href="#inicio" class="block text-gray-300 hover:text-brandRed font-medium py-2 border-b border-gray-800/50 mobile-link">Início</a>
+            <a href="#unidades" class="block text-gray-300 hover:text-brandRed font-medium py-2 border-b border-gray-800/50 mobile-link">Unidades (SP e SE)</a>
+            <a href="#sobre" class="block text-gray-300 hover:text-brandRed font-medium py-2 border-b border-gray-800/50 mobile-link">Sobre a UNIKYN</a>
+            <a href="#produtos" class="block text-gray-300 hover:text-brandRed font-medium py-2 border-b border-gray-800/50 mobile-link">Produtos e Linhas</a>
+            <a href="#calculadora" class="block text-gray-300 hover:text-brandRed font-medium py-2 border-b border-gray-800/50 mobile-link">Simular Orçamento</a>
+            <a href="#contato" class="block text-gray-300 hover:text-brandRed font-medium py-2 mobile-link">Contato</a>
+            
+            <a href="https://wa.me/5511958625538?text=Olá!%20Gostaria%20de%20falar%20com%20a%20UNIKYN%20pelo%20WhatsApp." target="_blank" class="w-full mt-4 bg-brandRed text-white font-bold py-3 rounded-xl shadow-md text-center flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-32 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-25">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="UNIKYN Esquadrias de Alumínio" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-darkBg/90 to-transparent z-1"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-darkBg via-darkBg/70 to-transparent z-1"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 text-center lg:text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <!-- Badges for Locations -->
+                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
+                        <span class="inline-flex items-center gap-1.5 bg-brandRed/10 border border-brandRed/30 text-brandRedLight font-bold px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-location-dot"></i> Interlagos - SP
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 bg-brandRed/10 border border-brandRed/30 text-brandRedLight font-bold px-3.5 py-1.5 rounded-full text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-location-dot"></i> Umbaúba - Sergipe
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+                        <span class="text-brandRed">UNIKYN</span> Esquadrias de Alumínio de Alto Padrão
+                    </h1>
+                    <p class="text-gray-300 text-lg sm:text-xl max-w-2xl leading-relaxed mb-8">
+                        Excelência na fabricação de portas, janelas, portões e fachadas sob medida. Atendemos com precisão técnica e pontualidade em <strong>São Paulo (Região de Interlagos)</strong> e no <strong>Nordeste (Umbaúba - SE)</strong>.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20com%20a%20UNIKYN." target="_blank" class="bg-brandRed hover:bg-brandRedHover text-white font-extrabold px-8 py-4 rounded-xl shadow-xl transition-all duration-300 red-glow flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> Solicitar Orçamento
+                        </a>
+                        <a href="#produtos" class="bg-darkGraphite hover:bg-gray-800 text-white border border-gray-700 font-semibold px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-solid fa-layer-group"></i> Nossos Produtos
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="mt-12 pt-8 border-t border-gray-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">Linha Gold</div>
+                            <div class="text-xs text-gray-400">& Suprema</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">100%</div>
+                            <div class="text-xs text-gray-400">Sob Medida</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-black text-white">2 Unidades</div>
+                            <div class="text-xs text-gray-400">SP & Sergipe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Feature Card with UK Logo Motif -->
+                <div class="lg:col-span-5 relative hidden lg:block">
+                    <div class="relative rounded-3xl overflow-hidden border border-brandRed/40 bg-darkCard p-4 shadow-2xl red-glow-sm">
+                        <div class="p-6 bg-gradient-to-b from-black to-darkGraphite rounded-2xl text-center border border-gray-800 mb-4">
+                            <div class="inline-block uk-logo-box px-4 py-2 rounded-2xl mb-3">
+                                <span class="text-4xl font-black text-brandRed">U<span class="text-white">K</span></span>
+                            </div>
+                            <h3 class="text-2xl font-black text-white tracking-wider">UNIKYN</h3>
+                            <p class="text-xs text-brandRed uppercase font-bold tracking-widest">Esquadrias de Alumínio</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Esquadria UNIKYN" class="w-full h-64 object-cover rounded-xl border border-gray-800">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Units / Localidades Section -->
+    <section id="unidades" class="py-16 bg-darkCard border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brandRed font-bold tracking-wider uppercase text-xs bg-brandRed/10 px-3 py-1 rounded-full border border-brandRed/20">Presença Regional</span>
+                <h2 class="text-3xl font-extrabold text-white mt-3">Nossas Regiões de Atendimento</h2>
+                <p class="text-gray-400 text-sm mt-2">A UNIKYN oferece estrutura técnica e atendimento rápido no Estado de São Paulo e na Região Nordeste.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Unit SP -->
+                <div class="bg-darkBg p-8 rounded-2xl border border-gray-800 hover:border-brandRed/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-city"></i>
+                        </div>
+                        <span class="text-xs font-bold text-brandRed uppercase tracking-wider">São Paulo - SP</span>
+                        <h3 class="text-2xl font-bold text-white mt-1 mb-3">Região de Interlagos & Zona Sul</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Atendimento completo para residências, condomínios e obras comerciais em Interlagos, Berrini, Santo Amaro, Morumbi, Moema e toda a região metropolitana de SP.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511958625538?text=Olá!%20Gostaria%20de%20atendimento%20para%20a%20região%20de%20São%20Paulo%20(Interlagos)." target="_blank" class="inline-flex items-center justify-center gap-2 text-sm font-bold text-white bg-darkGraphite hover:bg-brandRed px-4 py-3 rounded-xl border border-gray-700 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Atendimento em São Paulo
+                    </a>
+                </div>
+
+                <!-- Unit SE -->
+                <div class="bg-darkBg p-8 rounded-2xl border border-gray-800 hover:border-brandRed/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brandRed/10 text-brandRed flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <span class="text-xs font-bold text-brandRed uppercase tracking-wider">Sergipe - Nordeste</span>
+                        <h3 class="text-2xl font-bold text-white mt-1 mb-3">Região de Umbaúba & Região</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            Fabricação e instalação com o mesmo padrão de qualidade de São Paulo para a cidade de Umbaúba, Cristinápolis, Estância e municípios vizinhos em Sergipe.
+                        </p>
+                    </div>
+                    <a href="https://wa.me/5511958625538?text=Olá!%20Gostaria%20de%20atendimento%20para%20a%20região%20de%20Umbaúba%20-%20Sergipe." target="_blank" class="inline-flex items-center justify-center gap-2 text-sm font-bold text-white bg-darkGraphite hover:bg-brandRed px-4 py-3 rounded-xl border border-gray-700 transition-colors">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> Atendimento em Sergipe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-darkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Esquadria UNIKYN" class="rounded-2xl border border-gray-800 object-cover h-64 w-full">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80" alt="Instalação UNIKYN" class="rounded-2xl border border-gray-800 object-cover h-64 w-full mt-8">
+                    </div>
+                </div>
+
+                <div>
+                    <span class="text-brandRed font-bold tracking-wider uppercase text-xs bg-brandRed/10 px-3 py-1 rounded-full border border-brandRed/20">Conheça a UNIKYN</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4 mb-6">Qualidade de Ponta a Ponta no Seu Projeto</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        A <strong class="text-white">UNIKYN Esquadrias de Alumínio</strong> é especialista em transformar projetos arquitetônicos em realidade, aliando estética refinada, vedação perfeita e durabilidade do alumínio.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
+                        Trabalhamos com as melhores linhas do mercado (Linha Gold, Suprema, Integradas e Pele de Vidro), garantindo um acabamento impecável em cores como Preto Fosco, Branco Eletrostático, Grafite e Tons Amadeirados.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 bg-darkCard rounded-xl border border-gray-800">
+                            <i class="fa-solid fa-shield-halved text-brandRed text-xl"></i>
+                            <span class="text-sm font-semibold text-white">Garantia na Instalação</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-darkCard rounded-xl border border-gray-800">
+                            <i class="fa-solid fa-ruler-combined text-brandRed text-xl"></i>
+                            <span class="text-sm font-semibold text-white">Medição Precisa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services Section -->
+    <section id="produtos" class="py-24 bg-darkCard border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brandRed font-bold tracking-wider uppercase text-xs bg-brandRed/10 px-3 py-1 rounded-full border border-brandRed/20">Catálogo UNIKYN</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Esquadrias sob Medida</h2>
+                <p class="text-gray-400 text-base">Projetos desenvolvidos exclusivamente de acordo com suas especificações.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Portas UNIKYN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Portas de Correr & Pivotantes</h3>
+                        <p class="text-gray-400 text-sm mb-6">Grandes vãos, trilhos suaves e vedação acústica com perfis reforçados.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Portas%20de%20Alumínio." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=600&q=80" alt="Janelas Integradas UNIKYN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Janelas com Persiana Integrada</h3>
+                        <p class="text-gray-400 text-sm mb-6">Persianas blackout automatizadas ou manuais para quartos e suítes.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Janelas%20Integradas." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Fachadas Glazing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Fachada Pele de Vidro (Glazing)</h3>
+                        <p class="text-gray-400 text-sm mb-6">Visual corporativo de alto padrão com estrutura oculta e isolamento térmico.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Fachadas%20Pele%20de%20Vidro." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600607687940-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Portões Automatizados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Portões de Alumínio</h3>
+                        <p class="text-gray-400 text-sm mb-6">Modelos basculantes e de correr leves, resistentes e sem ferrugem.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Portões%20de%20Alumínio." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=600&q=80" alt="Guarda-Corpo UNIKYN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Guarda-Corpos & Sacadas</h3>
+                        <p class="text-gray-400 text-sm mb-6">Segurança para varandas e escadas combinando perfis de alumínio e vidro temperado.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Guarda-corpo." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-darkBg rounded-2xl overflow-hidden border border-gray-800 hover:border-brandRed/50 transition-all duration-300 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Pergolados UNIKYN" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-brandRed transition-colors">Pergolados & Brises</h3>
+                        <p class="text-gray-400 text-sm mb-6">Estruturas em alumínio para controle solar e valorização de áreas externas.</p>
+                        <a href="https://wa.me/5511958625538?text=Olá!%20Quero%20orçamento%20de%20Pergolados." target="_blank" class="w-full bg-darkGraphite hover:bg-brandRed text-white font-bold py-3 px-4 rounded-xl border border-gray-700 transition-colors flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i> Orçamento no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Budget Calculator Section -->
+    <section id="calculadora" class="py-20 bg-darkBg">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-darkCard rounded-3xl border border-gray-800 p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+                <div class="text-center mb-10">
+                    <span class="text-brandRed font-bold tracking-wider uppercase text-xs bg-brandRed/10 px-3 py-1 rounded-full border border-brandRed/20">Simulador de Projeto</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-3">Simule seu Orçamento UNIKYN</h2>
+                    <p class="text-gray-400 text-sm mt-2">Informe as dimensões aproximadas e envie direto para nossa equipe pelo WhatsApp.</p>
+                </div>
+
+                <form id="calc-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Unidade / Localidade</label>
+                            <select id="calc-region" class="w-full bg-darkBg border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-brandRed outline-none text-sm">
+                                <option value="São Paulo (Interlagos/SP)">São Paulo (Região de Interlagos)</option>
+                                <option value="Sergipe (Umbaúba/SE)">Sergipe (Região de Umbaúba)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Produto Desejado</label>
+                            <select id="calc-product" class="w-full bg-darkBg border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-brandRed outline-none text-sm">
+                                <option value="Porta de Correr (Linha Gold/Suprema)">Porta de Correr</option>
+                                <option value="Janela com Persiana Integrada">Janela com Persiana Integrada</option>
+                                <option value="Fachada Pele de Vidro">Fachada Pele de Vidro</option>
+                                <option value="Portão de Alumínio">Portão de Alumínio</option>
+                                <option value="Guarda-Corpo">Guarda-Corpo / Sacada</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Largura (Metros)</label>
+                            <input type="number" id="calc-width" step="0.1" min="0.5" max="20" placeholder="Ex: 2.5" class="w-full bg-darkBg border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-brandRed outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Altura (Metros)</label>
+                            <input type="number" id="calc-height" step="0.1" min="0.5" max="10" placeholder="Ex: 2.1" class="w-full bg-darkBg border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-brandRed outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-darkGraphite/60 rounded-xl border border-gray-800 flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Metragem Estimada:</span>
+                        <span id="calc-area" class="text-xl font-bold text-brandRed">0.00 m²</span>
+                    </div>
+
+                    <button type="button" id="send-whatsapp-calc" class="w-full bg-brandRed hover:bg-brandRedHover text-white font-extrabold py-4 rounded-xl shadow-lg transition-all red-glow flex items-center justify-center gap-3 text-base">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Simulação pelo WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Direct Information -->
+    <section id="contato" class="py-24 bg-darkCard border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Info -->
+                <div>
+                    <span class="text-brandRed font-bold tracking-wider uppercase text-xs bg-brandRed/10 px-3 py-1 rounded-full border border-brandRed/20">Canais de Atendimento</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-3 mb-6">Fale com a UNIKYN</h2>
+                    <p class="text-gray-400 text-sm mb-8">Envie seu projeto ou tire suas dúvidas através do WhatsApp ou e-mail oficial.</p>
+
+                    <div class="space-y-4">
+                        <a href="https://wa.me/5511958625538" target="_blank" class="flex items-center gap-4 p-4 bg-darkBg rounded-2xl border border-gray-800 hover:border-brandRed/50 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">WhatsApp / Telefone</h4>
+                                <p class="text-gray-400 text-sm">(11) 95862-5538</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:angeloreis80d@mail.com" class="flex items-center gap-4 p-4 bg-darkBg rounded-2xl border border-gray-800 hover:border-brandRed/50 transition-colors">
+                            <div class="w-12 h-12 rounded-xl bg-brandRed/10 text-brandRed flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">E-mail Oficial</h4>
+                                <p class="text-gray-400 text-sm">angeloreis80d@mail.com</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4 bg-darkBg rounded-2xl border border-gray-800">
+                            <div class="w-12 h-12 rounded-xl bg-brandRed/10 text-brandRed flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Unidades de Atendimento</h4>
+                                <p class="text-gray-400 text-xs"><strong>São Paulo:</strong> Região de Interlagos (Zona Sul - SP)<br><strong>Sergipe:</strong> Umbaúba e Região (SE)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email / Message Form -->
+                <div class="bg-darkBg p-8 rounded-3xl border border-gray-800">
+                    <h3 class="text-xl font-bold text-white mb-4">Envie uma Mensagem Direta</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Seu Nome</label>
+                            <input type="text" id="contact-name" required placeholder="Digite seu nome" class="w-full bg-darkCard border border-gray-700 text-white rounded-xl px-4 py-3 text-sm focus:border-brandRed outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Seu Telefone / WhatsApp</label>
+                            <input type="tel" id="contact-phone" required placeholder="(11) 95862-5538" class="w-full bg-darkCard border border-gray-700 text-white rounded-xl px-4 py-3 text-sm focus:border-brandRed outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Sua Região</label>
+                            <select id="contact-location" class="w-full bg-darkCard border border-gray-700 text-white rounded-xl px-4 py-3 text-sm focus:border-brandRed outline-none">
+                                <option value="Interlagos / São Paulo">São Paulo (Interlagos e Região)</option>
+                                <option value="Umbaúba / Sergipe">Sergipe (Umbaúba e Região)</option>
+                                <option value="Outra Região">Outra Região</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Mensagem</label>
+                            <textarea id="contact-message" rows="3" required placeholder="Conte um pouco sobre as esquadrias que precisa..." class="w-full bg-darkCard border border-gray-700 text-white rounded-xl px-4 py-3 text-sm focus:border-brandRed outline-none resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandRed hover:bg-brandRedHover text-white font-extrabold py-3.5 rounded-xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Projeto no WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6 pb-8 border-b border-gray-800">
+                <div class="flex items-center gap-3">
+                    <div class="uk-logo-box px-2.5 py-1 rounded-xl">
+                        <span class="text-xl font-black text-brandRed">U<span class="text-white">K</span></span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black text-white">UNI<span class="text-brandRed">KYN</span></span>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Esquadrias de Alumínio</p>
+                    </div>
+                </div>
+                <div class="text-xs text-center sm:text-right">
+                    <p class="text-gray-400">Contatos: (11) 95862-5538 | angeloreis80d@mail.com</p>
+                    <p class="text-gray-500 mt-1">Interlagos (SP) & Umbaúba (SE)</p>
+                </div>
+            </div>
+            <div class="pt-6 text-center text-xs text-gray-600">
+                &copy; 2026 UNIKYN Esquadrias de Alumínio. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511958625538?text=Olá!%20Vim%20pelo%20site%20da%20UNIKYN%20e%20gostaria%20de%20um%20atendimento." target="_blank" aria-label="Atendimento via WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform hover:scale-110 red-glow">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Interactive Area Calculator
+        const widthInput = document.getElementById('calc-width');
+        const heightInput = document.getElementById('calc-height');
+        const areaOutput = document.getElementById('calc-area');
+        const sendCalcBtn = document.getElementById('send-whatsapp-calc');
+
+        function updateArea() {
+            const w = parseFloat(widthInput.value) || 0;
+            const h = parseFloat(heightInput.value) || 0;
+            const area = (w * h).toFixed(2);
+            areaOutput.textContent = `${area} m²`;
+        }
+
+        widthInput.addEventListener('input', updateArea);
+        heightInput.addEventListener('input', updateArea);
+
+        sendCalcBtn.addEventListener('click', () => {
+            const region = document.getElementById('calc-region').value;
+            const product = document.getElementById('calc-product').value;
+            const w = widthInput.value || 'Não informado';
+            const h = heightInput.value || 'Não informado';
+            const area = areaOutput.textContent;
+
+            const text = `Olá! Fiz uma simulação de orçamento no site da UNIKYN:%0A- *Região:* ${region}%0A- *Produto:* ${product}%0A- *Largura:* ${w}m%0A- *Altura:* ${h}m%0A- *Metragem:* ${area}%0A%0AGostaria de mais detalhes e orçamento.`;
+            window.open(`https://wa.me/5511958625538?text=${text}`, '_blank');
+        });
+
+        // Contact Form
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const location = document.getElementById('contact-location').value;
+            const msg = document.getElementById('contact-message').value;
+
+            const text = `Olá! Meu nome é ${name} (${phone}).%0ARegião: ${location}%0AMensagem: ${msg}`;
+            window.open(`https://wa.me/5511958625538?text=${text}`, '_blank');
+        });
+    </script>
+</body>
+</html>
